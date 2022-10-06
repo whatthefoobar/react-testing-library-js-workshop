@@ -24,8 +24,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  background-color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +35,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.form-container {
+  padding: 20px;
+  background-color: white;
 }
