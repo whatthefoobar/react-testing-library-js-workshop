@@ -111,13 +111,14 @@ test("should show confirm password error if passwords don't match", () => {
 });
 
 test('should show no error message if every input is valid', () => {
+  render(<App />);
   const emailInputElement = screen.getByRole('textbox', { name: /email/i });
   const passwordInputElement = screen.getByLabelText('Password');
   const confirmPasswordInputElement = screen.getByLabelText('Confirm Password');
 
   userEvent.type(emailInputElement, 'selena@gmail.com');
   userEvent.type(passwordInputElement, '12345');
-  userEvent.type(confirmPasswordInputElement, '123456');
+  userEvent.type(confirmPasswordInputElement, '12345');
 
   const submitBtnElement = screen.getByRole('button', { name: /submit/i });
   userEvent.click(submitBtnElement);
